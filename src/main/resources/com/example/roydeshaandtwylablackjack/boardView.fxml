@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text fx:id="player1Name" layoutX="32.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player 1" />
+      <Text fx:id="player2Name" layoutX="502.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player 2" />
+      <Text fx:id="dealerName" layoutX="282.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dealer" />
+      <ImageView fx:id="dealerCard1" fitHeight="150.0" fitWidth="107.0" layoutX="175.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="dealerCard2" fitHeight="150.0" fitWidth="107.0" layoutX="300.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="player1Card1" fitHeight="150.0" fitWidth="107.0" layoutX="24.0" layoutY="236.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="player1Card2" fitHeight="150.0" fitWidth="107.0" layoutX="149.0" layoutY="236.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="player2Card1" fitHeight="150.0" fitWidth="107.0" layoutX="338.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="player2Card2" fitHeight="150.0" fitWidth="107.0" layoutX="463.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</Pane>
