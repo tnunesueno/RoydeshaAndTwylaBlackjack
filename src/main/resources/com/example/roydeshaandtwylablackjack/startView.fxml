@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Text?>
 
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.roydeshaandtwylablackjack.StartView">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: green;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.roydeshaandtwylablackjack.StartView">
    <children>
       <Button fx:id="playButton" layoutX="257.0" layoutY="234.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="85.0" text="Play">
          <font>
