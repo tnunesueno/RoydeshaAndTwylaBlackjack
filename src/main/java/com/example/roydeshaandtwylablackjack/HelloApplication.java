@@ -15,6 +15,7 @@ public class HelloApplication extends Application {
         stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();
+        Card.zipToCardArray("src/main/java/com/example/roydeshaandtwylablackjack/PNG-cards-1.3.zip");
     }
 
     public static void main(String[] args) {
