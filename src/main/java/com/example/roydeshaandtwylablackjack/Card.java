@@ -3,15 +3,11 @@ package com.example.roydeshaandtwylablackjack;
 
 import javafx.scene.image.Image;
 
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
-import java.lang.reflect.Array;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Enumeration;
-import java.util.zip.ZipEntry;
-import java.util.zip.ZipFile;
 
 public class Card {
     public Image cardImage;
@@ -79,19 +75,18 @@ public class Card {
         this.visible = visible;
     }
 
-    public static Array zipToCardArray(String zipFilePath) throws IOException {
-        File file = new File(zipFilePath);
-        ArrayList cardArray = new ArrayList<Card>();
-        ZipFile zipfile = new ZipFile(file);
-        Enumeration<?extends ZipEntry> entries= zipfile.entries();
+    public static Card imageToCard(File file) throws IOException {
+        String fullName = file.getName();
+        FileInputStream input = new FileInputStream(fullName);
+        Image image = new Image(input);
+        fullName = fullName.replaceAll("_of_"," ");
+        int spaceNum = fullName.indexOf(" ");
+        String cardName = fullName.substring(0, spaceNum);
+        int dotNum = fullName.indexOf(".");
+        String cardSuit = fullName.substring(spaceNum, dotNum);
 
-        while(entries.hasMoreElements()){
-            ZipEntry entry = entries.nextElement();
-            System.out.println("Entry name: "+entry.getName());
-            Files.copy(zipfile.getInputStream(entry), Paths.get("destination/path/" + entry.getName()));
-            Card card = new Card();
-        }
-
-        return null;
+        Card card = new Card(image, 0, cardSuit, cardName, null, true);
+        System.out.println("card suit: "+ card.getSuit()+ " card name: "+ card.getFace());
+        return card;
     }
 }

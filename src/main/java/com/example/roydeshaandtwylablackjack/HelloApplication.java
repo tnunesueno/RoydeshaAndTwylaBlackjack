@@ -5,7 +5,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.IOException;
+
+import static com.example.roydeshaandtwylablackjack.Card.imageToCard;
 
 public class HelloApplication extends Application {
     @Override
@@ -15,7 +18,8 @@ public class HelloApplication extends Application {
         stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();
-        Card.zipToCardArray("src/main/java/com/example/roydeshaandtwylablackjack/PNG-cards-1.3.zip");
+        File file = new File("2_of_clubs.png");
+        imageToCard(file);
     }
 
     public static void main(String[] args) {
