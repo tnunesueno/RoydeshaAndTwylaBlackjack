@@ -89,7 +89,7 @@ public class Card {
             ZipEntry entry = entries.nextElement();
             System.out.println("Entry name: "+entry.getName());
             Files.copy(zipfile.getInputStream(entry), Paths.get("destination/path/" + entry.getName()));
-           // Card card = new Card();
+            Card card = new Card();
         }
 
         return null;
