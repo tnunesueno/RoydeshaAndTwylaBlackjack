@@ -5,18 +5,20 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: green;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.roydeshaandtwylablackjack.Player">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: green;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.roydeshaandtwylablackjack.Controller">
    <children>
       <Text fx:id="player1Name" layoutX="110.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player 1" />
-      <Text fx:id="player2Name" layoutX="423.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player 2" />
-      <Text fx:id="dealerName" layoutX="282.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dealer" />
+      <Text fx:id="player2Name" layoutX="445.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player 2" />
+      <Text fx:id="dealerName" layoutX="282.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dealer" />
       <ImageView fx:id="dealerCard1" fitHeight="150.0" fitWidth="107.0" layoutX="175.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="dealerCard2" fitHeight="150.0" fitWidth="107.0" layoutX="300.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="player1Card1" fitHeight="150.0" fitWidth="107.0" layoutX="24.0" layoutY="236.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="player1Card2" fitHeight="150.0" fitWidth="107.0" layoutX="149.0" layoutY="236.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fx:id="player2Card1" fitHeight="150.0" fitWidth="107.0" layoutX="338.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fx:id="player2Card2" fitHeight="150.0" fitWidth="107.0" layoutX="463.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true" />
-      <Button fx:id="hitButton" layoutX="24.0" layoutY="203.0" mnemonicParsing="false" text="Hit" />
-      <Button fx:id="standButton" layoutX="203.0" layoutY="203.0" mnemonicParsing="false" text="Stand" />
+      <ImageView fx:id="player2Card1" fitHeight="150.0" fitWidth="107.0" layoutX="338.0" layoutY="236.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="player2Card2" fitHeight="150.0" fitWidth="107.0" layoutX="472.0" layoutY="236.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="hitOne" layoutX="44.0" layoutY="203.0" mnemonicParsing="false" text="Hit" />
+      <Button fx:id="standOne" layoutX="177.0" layoutY="203.0" mnemonicParsing="false" text="Stand" />
+      <Button fx:id="hitTwo" layoutX="375.0" layoutY="203.0" mnemonicParsing="false" text="Hit" />
+      <Button fx:id="standTwo" layoutX="525.0" layoutY="203.0" mnemonicParsing="false" text="Stand" />
    </children>
 </Pane>
