@@ -75,18 +75,12 @@ public class Card {
         this.visible = visible;
     }
 
-    public static Card imageToCard(File file) throws IOException {
-        String fullName = file.getName();
-        FileInputStream input = new FileInputStream(fullName);
-        Image image = new Image(input);
-        fullName = fullName.replaceAll("_of_"," ");
-        int spaceNum = fullName.indexOf(" ");
-        String cardName = fullName.substring(0, spaceNum);
-        int dotNum = fullName.indexOf(".");
-        String cardSuit = fullName.substring(spaceNum, dotNum);
+    public static Card imageToCard(FileInputStream stream, String name) throws IOException {
+        String fullName = stream.toString();
+        Image image = new Image(stream);
 
-        Card card = new Card(image, 0, cardSuit, cardName, null, true);
-        System.out.println("card suit: "+ card.getSuit()+ " card name: "+ card.getFace());
+        Card card = new Card(image, 0, null, null, null, true);
+        System.out.println("card Image: "+ card.getCardImage() +" card suit: "+ card.getSuit()+ " card name: "+ card.getFace());
         return card;
     }
 }

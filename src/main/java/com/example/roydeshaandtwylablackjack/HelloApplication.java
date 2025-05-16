@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 
 import static com.example.roydeshaandtwylablackjack.Card.imageToCard;
@@ -18,8 +19,8 @@ public class HelloApplication extends Application {
         stage.setTitle("BLACKJACK!");
         stage.setScene(scene);
         stage.show();
-        File file = new File("2_of_clubs.png");
-        imageToCard(file);
+        FileInputStream stream = new FileInputStream("src/main/java/com/example/roydeshaandtwylablackjack/2_of_clubs.png");
+        imageToCard(stream, "2 of clubs");
     }
 
     public static void main(String[] args) {

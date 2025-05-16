@@ -4,14 +4,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
 public class Player {
-    Button hitOne;
-    Button standOne;
-    Button hitTwo;
-    Button standTwo;
-    @FXML
-    Button hitButton;
-    @FXML
-    Button standButton;
     Boolean playerHit;
     int currentHandSum;
 
