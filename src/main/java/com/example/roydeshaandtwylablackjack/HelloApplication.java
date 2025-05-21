@@ -19,7 +19,9 @@ public class HelloApplication extends Application {
         stage.setTitle("BLACKJACK!");
         stage.setScene(scene);
         stage.show();
-        FileInputStream stream = new FileInputStream("src/main/java/com/example/roydeshaandtwylablackjack/2_of_clubs.png");
+
+      FileInputStream stream = new FileInputStream("src/main/java/com/example/roydeshaandtwylablackjack/2_of_clubs.png");
+        // logic here to parse name
         imageToCard(stream, "2 of clubs");
     }
 

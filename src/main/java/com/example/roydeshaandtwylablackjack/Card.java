@@ -76,7 +76,7 @@ public class Card {
     }
 
     public static Card imageToCard(FileInputStream stream, String name) throws IOException {
-        String fullName = stream.toString();
+      //  String fullName = stream.toString();
         Image image = new Image(stream);
 
         Card card = new Card(image, 0, null, null, null, true);
