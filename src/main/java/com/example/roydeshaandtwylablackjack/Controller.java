@@ -2,6 +2,7 @@ package com.example.roydeshaandtwylablackjack;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -16,6 +17,9 @@ public class Controller {
     Button hitTwo;
     @FXML
     Button standTwo;
+    @FXML
+    ImageView deckOfCards;
+
 
 
 
