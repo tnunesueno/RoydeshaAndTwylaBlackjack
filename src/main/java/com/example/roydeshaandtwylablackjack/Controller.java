@@ -24,6 +24,7 @@ public class Controller {
 
 
     public void initialize() throws IOException {
+
         Card firstCard = new Card("2_of_clubs.png");
 
         System.out.println("suit: " + firstCard.getSuit());

@@ -37,7 +37,7 @@ public class Card {
        }
 
        int period = cardName.indexOf(".");
-       String cardSuit = cardName.substring(underScore1+3, period);
+       String cardSuit = cardName.substring(underScore1+4, period);
        if(cardSuit.contains("2")){
            cardSuit.replaceAll("2", "");
        }
