@@ -8,6 +8,9 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.ArrayList;
+
+import static java.lang.Integer.parseInt;
 
 public class Card {
     public Image cardImage;
@@ -16,15 +19,37 @@ public class Card {
     public String face;
     public Player playerBelong;
     public boolean visible;
+    public static ArrayList<Card> cardList;
     //public ZipFile zipFile;
 
-    public Card(Image cardImage, int value, String suit, String face, Player playerBelong, boolean visible) {
-        this.cardImage = cardImage;
-        this.value = value;
-        this.suit = suit;
-        this.face = face;
-        this.playerBelong = playerBelong;
-        this.visible = visible;
+    public Card (String cardName) throws IOException {
+        Card thisCard = new Card(cardName);
+        int underScore1 = cardName.indexOf("_");
+
+       if (underScore1==1){
+           int cardNum = parseInt(cardName.substring(0,underScore1));
+           thisCard.setValue(cardNum);
+           thisCard.setFace(null);
+       } else {
+           String cardFace = cardName.substring(0,underScore1);
+           thisCard.setValue(10);
+           thisCard.setFace(cardFace);
+       }
+
+       int period = cardName.indexOf(".");
+       String cardSuit = cardName.substring(underScore1+3, period);
+       if(cardSuit.contains("2")){
+           cardSuit.replaceAll("2", "");
+       }
+       thisCard.setSuit(cardSuit);
+
+        FileInputStream stream = new FileInputStream("src/main/java/com/example/roydeshaandtwylablackjack/"+ cardName);
+        Image image = new Image(stream);
+        thisCard.setCardImage(image);
+
+        cardList.add(thisCard);
+        System.out.println("value: " + thisCard.getValue()+ " suit: " +thisCard.getSuit());
+
     }
 
     public Image getCardImage() {
@@ -75,12 +100,5 @@ public class Card {
         this.visible = visible;
     }
 
-    public static Card imageToCard(FileInputStream stream, String name) throws IOException {
-      //  String fullName = stream.toString();
-        Image image = new Image(stream);
 
-        Card card = new Card(image, 0, null, null, null, true);
-        System.out.println("card Image: "+ card.getCardImage() +" card suit: "+ card.getSuit()+ " card name: "+ card.getFace());
-        return card;
-    }
 }
