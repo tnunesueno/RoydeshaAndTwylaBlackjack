@@ -7,11 +7,6 @@ public class Player {
     Boolean playerHit;
     int currentHandSum;
 
-    public void initialize () {
-        //depending on who is player one and two set hit & stand to visable(false)
-
-
-    }
 
     public void chooseHit () {
         if (playerHit = true) {

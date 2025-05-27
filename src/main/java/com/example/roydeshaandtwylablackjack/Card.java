@@ -19,21 +19,21 @@ public class Card {
     public String face;
     public Player playerBelong;
     public boolean visible;
-    public static ArrayList<Card> cardList;
+    public static ArrayList<Card> cardList = new ArrayList<>();
     //public ZipFile zipFile;
 
     public Card (String cardName) throws IOException {
-        Card thisCard = new Card(cardName);
+
         int underScore1 = cardName.indexOf("_");
 
        if (underScore1==1){
            int cardNum = parseInt(cardName.substring(0,underScore1));
-           thisCard.setValue(cardNum);
-           thisCard.setFace(null);
+           this.setValue(cardNum);
+           this.setFace(null);
        } else {
            String cardFace = cardName.substring(0,underScore1);
-           thisCard.setValue(10);
-           thisCard.setFace(cardFace);
+           this.setValue(10);
+           this.setFace(cardFace);
        }
 
        int period = cardName.indexOf(".");
@@ -41,14 +41,14 @@ public class Card {
        if(cardSuit.contains("2")){
            cardSuit.replaceAll("2", "");
        }
-       thisCard.setSuit(cardSuit);
+       this.setSuit(cardSuit);
 
         FileInputStream stream = new FileInputStream("src/main/java/com/example/roydeshaandtwylablackjack/"+ cardName);
         Image image = new Image(stream);
-        thisCard.setCardImage(image);
+        this.setCardImage(image);
 
-        cardList.add(thisCard);
-        System.out.println("value: " + thisCard.getValue()+ " suit: " +thisCard.getSuit());
+        cardList.add(this);
+        System.out.println("value: " + this.getValue()+ " suit: " +this.getSuit());
 
     }
 
