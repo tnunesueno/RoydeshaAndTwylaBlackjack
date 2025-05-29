@@ -6,7 +6,35 @@ import javafx.scene.control.Button;
 public class Player {
     Boolean playerHit;
     int currentHandSum;
+    String name;
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Boolean getPlayerHit() {
+        return playerHit;
+    }
+
+    public void setPlayerHit(Boolean playerHit) {
+        this.playerHit = playerHit;
+    }
+
+    public int getCurrentHandSum() {
+        return currentHandSum;
+    }
+
+    public Player(String name) {
+        this.name = name;
+    }
+
+    public void setCurrentHandSum(int currentHandSum) {
+        this.currentHandSum = currentHandSum;
+    }
 
     public void chooseHit () {
         if (playerHit = true) {
@@ -21,6 +49,8 @@ public class Player {
 
     }
 
-
+ public void addCardToHand(Card card){
+        this.setCurrentHandSum(currentHandSum+card.getValue());
+ }
 
 }

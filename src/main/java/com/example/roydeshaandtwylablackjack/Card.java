@@ -48,8 +48,6 @@ public class Card {
         this.setCardImage(image);
 
         cardList.add(this);
-        System.out.println("value: " + this.getValue()+ " suit: " +this.getSuit());
-
     }
 
     public Image getCardImage() {
