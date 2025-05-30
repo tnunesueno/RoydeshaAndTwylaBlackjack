@@ -1,5 +1,6 @@
 package com.example.roydeshaandtwylablackjack;
 
+import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
@@ -10,6 +11,7 @@ import java.net.Socket;
 public class ClientController implements MessageController {
     public TextField ipText;
     public TextField portText;
+    @FXML
     public Button connectButton;
     public TextField messageText;
     public Button sendButton;
@@ -27,8 +29,12 @@ public class ClientController implements MessageController {
 
     public void connect() throws Exception {
         if (!connectedToServer) {
+            /* DO THIS LATER
             String ipAddress = ipText.getText();
-            int portNumber = Integer.parseInt(portText.getText());
+            int portNumber = Integer.parseInt(portText.getText());*/
+            String ipAddress = "127.0.0.1";
+            int portNumber = 543216;
+
             clientSocket = new Socket(ipAddress, portNumber);
             objectOut = new ObjectOutputStream(clientSocket.getOutputStream());
             ReaderThread read1 = new ReaderThread(clientSocket, messagesIn);
