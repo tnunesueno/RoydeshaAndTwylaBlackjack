@@ -8,12 +8,13 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.ArrayList;
 
 import static java.lang.Integer.parseInt;
 
-public class Card {
-    public Image cardImage;
+public class Card implements Serializable {
+    transient public Image cardImage;
     public int value;
     public String suit;
     public String face;

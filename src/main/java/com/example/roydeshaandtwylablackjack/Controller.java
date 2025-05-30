@@ -58,13 +58,13 @@ public class Controller {
             }
         }
 
-        // this should prob be a for loop if twyla gets less lazy
+        /* this should prob be a for loop if twyla gets less lazy
         deal(player1Card1, player1);
         deal(player1Card2, player1);
         deal(player2Card1, player2);
         deal(player2Card2, player2);
         deal(dealerCard1, dealer);
-        deal(dealerCard2, dealer);
+        deal(dealerCard2, dealer);*/
     }
 
     public void deal(ImageView imageview, Player player){
@@ -78,6 +78,7 @@ public class Controller {
             Card.cardList.remove(selectedCard);
 
             player.addCardToHand(selectedCard);
+            selectedCard.setPlayerBelong(player);
             System.out.println(player.getName()+ " current hand value: " +player.getCurrentHandSum());
         } else {
             System.out.println("NO CARDS IN DECK");
